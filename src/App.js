@@ -5,7 +5,7 @@ import Library from "./components/Library";
 import Nav from "./components/Nav";
 
 // import util
-import data from "./util";
+import data from "./data";
 
 //Import Styles
 import "./styles/app.scss";
