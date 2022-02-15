@@ -8,8 +8,6 @@ import {
   faVolumeDown,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { playAudio } from "../util";
-
 const Player = ({
   isPlaying,
   setIsPlaying,
@@ -41,9 +39,6 @@ const Player = ({
     setSongs(newSongs);
   };
 
-  const trackAnim = {
-    transform: `translateX(${songInfo.animationPercentage}%)`,
-  };
   //Event Handlers
   function getTime(time) {
     return (
@@ -76,7 +71,7 @@ const Player = ({
       if ((currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
         activeLibraryHandler(songs[songs.length - 1]);
-        playAudio(isPlaying, audioRef);
+        if (isPlaying) audioRef.current.play();
         return;
       }
       await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
@@ -94,6 +89,7 @@ const Player = ({
     <div className="player">
       <div className="time-control">
         <p>{getTime(songInfo.currentTime)}</p>
+
         <input
           min={0}
           max={songInfo.duration || 0}
