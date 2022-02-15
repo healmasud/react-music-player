@@ -2,7 +2,7 @@
 
 This is a full-featured music player built with React and Sass. The music player offers basic functionality and an entire library section where users can choose and skip to different music of their taste.
 
-Ongoing project.
+Live demo: https://music-player-reactv2.netlify.app/
 
 ## Full application
 
