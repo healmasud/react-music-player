@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
   faAngleLeft,
   faAngleRight,
   faPause,
-  faVolumeDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Player = ({
@@ -19,8 +19,6 @@ const Player = ({
   setCurrentSong,
   setSongs,
 }) => {
-  const [activeVolume, setActiveVolume] = useState(false);
-  //UseEffect Update List
   const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
@@ -78,11 +76,6 @@ const Player = ({
       activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
     }
     if (isPlaying) audioRef.current.play();
-  };
-  const changeVolume = (e) => {
-    let value = e.target.value;
-    audioRef.current.volume = value;
-    setSongInfo({ ...songInfo, volume: value });
   };
 
   return (
