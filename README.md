@@ -15,3 +15,13 @@ Live demo can be found here: https://music-player-reactv2.netlify.app/
 ## Library Section
 
 ![Pic](https://raw.githubusercontent.com/healmasud/react-music-player/master/github-overview/library.png)
+
+## Install the project
+- Clone the repository
+- Run the following command
+```
+    npm install 
+```
+```
+    npm start 
+```
