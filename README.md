@@ -4,7 +4,7 @@ This is a full-featured music player built with React and Sass. The music player
 
 Live demo can be found here: https://music-player-reactv2.netlify.app/
 
-## Full application
+## Application Overview
 
 ![Pic](https://raw.githubusercontent.com/healmasud/react-music-player/master/github-overview/full-app.png)
 
